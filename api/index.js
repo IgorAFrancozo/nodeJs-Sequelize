@@ -6,6 +6,6 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => res.status(200).send("Sequelize Test"));
+app.get("/", (req, res) => res.status(200).send("Sequelize"));
 
 app.listen(port, () => console.log(`Api executando na Porta: ${port}`));    
