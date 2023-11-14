@@ -1,11 +1,12 @@
 const express = require("express");
-const bodyParser = require("body-parser");
+const routes = require('./routes');
+
 
 const app = express();
 const port = 3000;
 
-app.use(bodyParser.json());
+routes(app)
 
-app.get("/", (req, res) => res.status(200).send("Sequelize Test"));
+app.listen(port, () => console.log(`Api executando na Porta: ${port}`));
 
-app.listen(port, () => console.log(`Api executando na Porta: ${port}`));    
+module.exports = app;
